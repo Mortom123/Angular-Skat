@@ -1,0 +1,27 @@
+<div class="headerbar mat-elevation-z8" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <div *ngFor="let entry of entries">
+    <div *ngIf="entry.subEntries && entry.subEntries.length; then subEntries else noEntries"></div>
+    <!-- no sub entries -->
+    <ng-template #noEntries>
+        <button mat-button (click)="navTo(entry.route)">
+          <mat-icon *ngIf="entry.icon">{{entry.icon}}</mat-icon> &nbsp; {{entry.name}}
+        </button>
+    </ng-template>
+    <!-- sub entries -->
+    <ng-template #subEntries>
+        <button mat-button [matMenuTriggerFor]="subMenu">
+          <mat-icon *ngIf="entry.icon">{{entry.icon}}</mat-icon> &nbsp; {{entry.name}}
+        </button>
+    </ng-template>
+    <mat-menu #subMenu="matMenu">
+      <button mat-button 
+      fxFlex="row" fxLayoutAlign="start start"
+      class="w100" 
+      *ngFor="let subEntry of entry.subEntries" 
+      (click)="navTo(entry.base+'/'+subEntry.route)">
+        <mat-icon *ngIf="subEntry.icon">{{subEntry.icon}}</mat-icon> &nbsp; {{subEntry.name}}
+      </button>
+    </mat-menu>
+
+  </div>
+</div>

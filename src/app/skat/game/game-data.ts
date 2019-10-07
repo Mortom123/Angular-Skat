@@ -1,8 +1,8 @@
-export enum TurnType {
-  RAMSCH = 0,
-  GRAND = 24,
-  NULL = 0,
-  FARB = 0
+export abstract class TurnType{
+  static GRAND = {name: "grand"}
+  static RAMSCH = {name: "ramsch"}
+  static NULL = {name: "null"}
+  static FARB = {name: "farb"}
 }
 
 export enum NullScores {
@@ -18,3 +18,4 @@ export enum Farben {
   HERZ = 10,
   KARO = 9
 }
+

@@ -15,7 +15,7 @@ export const DEFAULT_REIZ_MODS: ReizModifiers = {
   schneider: false,
   schwarz: false,
   angesagt: false,
-  mitOhne: 1,
+  mitOhne: undefined,
   überReizt: false
 }
 

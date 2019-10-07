@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+/**
+* add for all material components
+* mat-icon {
+*      font-family: 'Material Icons' !important;
+*}
+*
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fullscreen {
+    width: 100vw ;
+    height: 100vh ;
+}
+
+.hidden-overflow {
+    overflow: hidden;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}

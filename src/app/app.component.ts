@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Skat } from './skat/skatTesting-delete-later';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'skat';
+
+  constructor() {
+    
+  }
 }
