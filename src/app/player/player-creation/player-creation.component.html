@@ -1,3 +1,13 @@
-<p>
-  player-creation works!
-</p>
+<div @slide class="w100 h100"> 
+  <form [formGroup]="playerForm" (ngSubmit)="onSubmit()" class="h100 w100 creationForm" fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+    <!-- name -->
+    <mat-form-field appearence="outline">
+      <mat-label>Spielername</mat-label>
+      <input matInput required placeholder="Name eingeben" formControlName="name">
+      <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <!-- submit -->
+    <button mat-raised-button color="primary">Erstellen</button>
+
+  </form>
+</div>

@@ -22,8 +22,8 @@ export const menuEntries: MenuEntries[] = [
     name: "Spieler", icon: "group",
     base: "player",
     subEntries: [
-      { name: "Spieler ansehen", icon: 'view_list', route:'add'},
-      { name: "Spieler erstellen", icon:"add" , route:''}
+      { name: "Spieler ansehen", icon: 'view_list', route:''},
+      { name: "Spieler erstellen", icon:"add" , route:'add'}
     ]
   },
   {
